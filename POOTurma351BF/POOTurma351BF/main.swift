@@ -154,12 +154,12 @@ class Cachorro: Animal {
 
 var ayron: Cachorro = Cachorro(idade: 1, latir: false, nome: "Ayron", cor: "Branco", peso: 20)
 
-print(ayron.idade)
+//print(ayron.idade)
 
 var alfredo: Gato = Gato(miar: true, nome: "Alfredo", cor: "Beje", peso: 10)
 
-print(alfredo.nome)
-alfredo.brincar()
+//print(alfredo.nome)
+//alfredo.brincar()
 
 // Classe pai
 class TestePessoa {
@@ -177,10 +177,109 @@ class Caio: TestePessoa {
     
 }
 
-// Desafio
-// Criar uma classe pai na qual tenha 3 caracteristicas e 2 ações.
-// Criar 2 classes filhas distintas, porem ambas vão herdar da classe pai(super). Cada classe filha terá 3 caracteristicas especificas.
-// A classe pai terá construtor para setar seus valores.
-// Uma das classes filhas não deve conter construtor.
-// Uma das classes filhas deve conter contrutor indicando os valores de todas as suas propriedades.
+// MARK: - Polimorfismo
+
+class Carro {
+    var marca: String
+    var ano: Int
+    var potencia: Double
+    
+    init(marca: String, ano: Int, potencia: Double) {
+        self.marca = marca
+        self.ano = ano
+        self.potencia = potencia
+    }
+    
+    func abrirCapota() {
+        print("um simples carro está com a capota aberta")
+    }
+}
+
+class Fusca: Carro {
+    
+    override func abrirCapota() {
+        print("Um baitaaa carro está com a capota aberta!")
+    }
+    
+}
+
+var carroCaio: Fusca = Fusca(marca: "VW", ano: 1975, potencia: 45)
+
+//carroCaio.abrirCapota()
+
+// MARK: - Encapsulamento
+
+class ItensDeMercado {
+    
+    private var listaDeItens: [String] = []
+    
+    public func getListaDeItens() -> [String] {
+        return listaDeItens
+    }
+    
+    public func setListDeItens(item: String) {
+        listaDeItens.append(item)
+    }
+    
+}
+
+//var itens: ItensDeMercado = ItensDeMercado()
+//print(itens.getListaDeItens())
+//itens.setListDeItens(item: "Melão")
+//print(itens.getListaDeItens())
+
+
+// Struct
+// Struct trabalha com VALUE TYPE
+// Struct não precisa de init de forma explicita
+// Struct não tem herança
+// Struct só aceita estar em conformidade com PROTOCOLO
+
+
+//class Celular {
+//    var modelo: String
+//
+//    init(modelo: String) {
+//        self.modelo = modelo
+//    }
+//
+//}
+
+struct Celular {
+    var modelo: String
+}
+
+var iphone: Celular = Celular(modelo: "iphone 15")
+var android: Celular = Celular(modelo: "Galaxy 25")
+
+//// Exemplo utilizando REFERENCY TYPE -> SENDO CELULAR UMA 'CLASSE'
+//iphone = android
+//print(iphone.modelo)
+//print(android.modelo)
+//
+//iphone.modelo = "Moto G4"
+//print(iphone.modelo)
+//print(android.modelo)
+
+// Exemplo utilizando VALUE TYPE -> SENDO CELULAR UMA 'STRUCT'
+
+iphone = android
+print(iphone.modelo)
+print(android.modelo)
+
+iphone.modelo = "Moto G4"
+print(iphone.modelo)
+print(android.modelo)
+
+
+// Referecy type -> Ambos objetos são apontados para a mesma referencia (se caso altero um dos objetodos o outro objeto tambem será alterado obtendo o mesmo valor do outro e assim vice-versa)
+
+// Value Type -> Quando trabalhamos com struct (value type) cada objeto não se refere nada com o outro, sendo assim, caso altere o valor de um objeto o outro objeto, ao contrario da classe, não sofrerá nenhuma alteração.
+
+
+
+
+
+
+
 
