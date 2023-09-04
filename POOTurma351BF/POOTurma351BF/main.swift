@@ -89,10 +89,98 @@ var felipe: Pessoa = Pessoa(nome: "Felipe", idade: 31, peso: 70)
 
 caio = felipe
 
-print(caio.nome)
-print(caio.idade)
+//print(caio.nome)
+//print(caio.idade)
 
 caio.idade = 40
 
-print(caio.idade)
-print(felipe.idade)
+//print(caio.idade)
+//print(felipe.idade)
+
+
+// MARK: - Herança
+
+// Classe Pai
+
+class Animal {
+    
+    var nome: String
+    var cor: String
+    var peso: Double
+    
+    init(nome: String, cor: String, peso: Double) {
+        self.nome = nome
+        self.cor = cor
+        self.peso = peso
+    }
+}
+
+// Classe Filha
+// Toda a vez que a classe filha necessitar de um construtor ela deve passar as suas propriedades como tambem se a classe pai
+// tiver contrutor deve-se então popular com a palavra reservada super.init
+// Caso a classe pai não tenha um construtor, não necessita passar o super.init pois a classe pai já tem todos os seus valores iniciais setados.
+// Só utilizamos o super.init caso a classe pai tenha um construtor, caso contrario não temos a necessidade de utilizar o super.init
+
+class Gato: Animal {
+    
+    var miar: Bool
+    
+    init(miar: Bool, nome: String, cor: String, peso: Double ) {
+        self.miar = miar
+        super.init(nome: nome, cor: cor, peso: peso)
+    }
+    
+    func brincar() {
+        print("O Gato \(nome) está brincando")
+    }
+
+}
+
+// Classe Filha
+
+class Cachorro: Animal {
+    
+    var idade: Int
+    var latir: Bool
+    
+    init(idade: Int, latir: Bool, nome: String, cor: String, peso: Double) {
+        self.idade = idade
+        self.latir = latir
+        super.init(nome: nome, cor: cor, peso: peso)
+    }
+    
+}
+
+
+var ayron: Cachorro = Cachorro(idade: 1, latir: false, nome: "Ayron", cor: "Branco", peso: 20)
+
+print(ayron.idade)
+
+var alfredo: Gato = Gato(miar: true, nome: "Alfredo", cor: "Beje", peso: 10)
+
+print(alfredo.nome)
+alfredo.brincar()
+
+// Classe pai
+class TestePessoa {
+    var dorminhoco: Bool = true
+}
+
+// Classe filha
+class Caio: TestePessoa {
+    
+    var nome: String
+    
+    init(nome: String) {
+        self.nome = nome
+    }
+    
+}
+
+// Desafio
+// Criar uma classe pai na qual tenha 3 caracteristicas e 2 ações.
+// Criar 2 classes filhas distintas, porem ambas vão herdar da classe pai(super). Cada classe filha terá 3 caracteristicas especificas.
+// A classe pai terá construtor para setar seus valores.
+// Uma das classes filhas não deve conter construtor.
+// Uma das classes filhas deve conter contrutor indicando os valores de todas as suas propriedades.
+
