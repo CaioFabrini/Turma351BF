@@ -27,7 +27,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var changeButton: UIButton!
     
     
-    
  // o ciclo de vida 'viewDidLoad' ele é disparado automaticamente quando a nossa tela é carregada já obtendo todas as informações sobre os elementos que o nosso CORPO(arquivo storyboard) contem.
     
     // Utilizamos o viewDidLoad para fazer oque?
@@ -44,6 +43,12 @@ class ViewController: UIViewController {
     
     // Ligações @IBAction sempre são utilizadas depois dos metodos de live cycle que servem para disparar como o proprio nome diz uma action.
     
+    // Padrão de nomenclatura: (isso depende muito de projeto para projeto)
+    // prefixo -> tapped
+    // no meio coloque o nome do seu elemento de ação
+    // no fim sempre o nome do seu elemento
+    
+    
     @IBAction func tappedChangeButton(_ sender: UIButton) {
         nameLabel.text = "Anderson"
         nameLabel.backgroundColor = .green
@@ -53,7 +58,6 @@ class ViewController: UIViewController {
     
     func configElements() {
         nameLabel.text = "Caio"
-        nameLabel.backgroundColor = .clear
         lastNameLabel.text = "Fabrini"
         changeButton.setTitle("Trocar os nomes", for: .normal)
     }
