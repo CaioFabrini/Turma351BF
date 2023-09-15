@@ -24,11 +24,21 @@
                                     <action selector="tappedBackButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bZr-x7-bb4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d92-ko-q1R">
+                                <rect key="frame" x="130.33333333333337" y="463.66666666666669" width="132.66666666666663" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Ir para Tela 03"/>
+                                <connections>
+                                    <action selector="tappedShowScreen03Button:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="PJy-HH-YNG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
                             <constraint firstItem="UCF-yo-Vh5" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="NUo-An-HQO"/>
+                            <constraint firstItem="d92-ko-q1R" firstAttribute="top" secondItem="UCF-yo-Vh5" secondAttribute="bottom" constant="20" id="odK-YO-zRe"/>
+                            <constraint firstItem="d92-ko-q1R" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="r98-IC-75u"/>
                             <constraint firstItem="UCF-yo-Vh5" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="zcc-oP-Xce"/>
                         </constraints>
                     </view>

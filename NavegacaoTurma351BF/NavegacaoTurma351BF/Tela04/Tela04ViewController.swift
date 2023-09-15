@@ -13,5 +13,9 @@ class Tela04ViewController: UIViewController {
         super.viewDidLoad()
 
     }
-
+    
+    @IBAction func tappedRootButton(_ sender: UIButton) {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
 }

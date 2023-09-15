@@ -11,12 +11,26 @@
         <!--Tela04 View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="Tela04ViewController" customModule="NavegacaoTurma351BF" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Tela04ViewController" id="Y6W-OH-hqX" customClass="Tela04ViewController" customModule="NavegacaoTurma351BF" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcr-kG-zBj">
+                                <rect key="frame" x="100.66666666666669" y="408.66666666666669" width="192" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Voltar para a tela Root"/>
+                                <connections>
+                                    <action selector="tappedRootButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eqp-fr-rfm"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstItem="rcr-kG-zBj" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="5xI-6o-TBm"/>
+                            <constraint firstItem="rcr-kG-zBj" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="WCP-dg-APp"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -25,8 +39,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
