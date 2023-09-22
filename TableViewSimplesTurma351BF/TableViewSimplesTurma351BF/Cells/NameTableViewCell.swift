@@ -18,6 +18,7 @@ import UIKit
 class NameTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var lastName: UILabel!
     
     static let identifier: String = "NameTableViewCell"
     
@@ -33,10 +34,12 @@ class NameTableViewCell: UITableViewCell {
     
     func configElements() {
         nameLabel.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        lastName.font = UIFont.systemFont(ofSize: 16, weight: .bold)
     }
     
-    func setupCell(name: String) {
-        nameLabel.text = name
+    func setupCell(person: Person) {
+        nameLabel.text = person.name
+        lastName.text = person.lastName
     }
     
 }

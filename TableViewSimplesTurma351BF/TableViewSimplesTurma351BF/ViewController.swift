@@ -45,7 +45,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var list: [String] = ["Caio", "Felipe", "Gabriel", "Bárbara", "Lucas", "Fabim", "Luana", "Reinaldo", "Julio", "Eduardo"]
+    
+    var list2: [String] = ["Caio", "Felipe", "Lucas"]
+  
+    var list: [Person] = [Person(name: "Caio", lastName: "Fabrini"),
+                          Person(name: "Felipe", lastName: "Miranda"),
+                          Person(name: "Lucas", lastName: "Munho")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,7 +84,7 @@ extension ViewController: UITableViewDataSource {
     // disparado 10 vezes, pois ele precisar criar as 10 celulas.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: NameTableViewCell.identifier, for: indexPath) as? NameTableViewCell
-        cell?.setupCell(name: list[indexPath.row])
+        cell?.setupCell(person: list[indexPath.row])
         return cell ?? UITableViewCell()
     }
     
