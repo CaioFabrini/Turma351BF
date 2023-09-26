@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CarsCollectionViewCell" customModule="PrimeiroAppCollectionViewTurm351BF" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="806" height="203"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="806" height="203"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car2" translatesAutoresizingMaskIntoConstraints="NO" id="rF0-nt-wo3">
+                        <rect key="frame" x="0.0" y="0.0" width="806" height="203"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="rF0-nt-wo3" secondAttribute="bottom" id="6RX-3G-SkI"/>
+                <constraint firstItem="rF0-nt-wo3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ia7-Gp-eY4"/>
+                <constraint firstItem="rF0-nt-wo3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bfL-W3-dze"/>
+                <constraint firstAttribute="trailing" secondItem="rF0-nt-wo3" secondAttribute="trailing" id="ld0-S1-fbJ"/>
+            </constraints>
+            <size key="customSize" width="806" height="203"/>
+            <connections>
+                <outlet property="carImageView" destination="rF0-nt-wo3" id="QYv-39-tiX"/>
+            </connections>
+            <point key="canvasLocation" x="603.05343511450383" y="33.450704225352112"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="car2" width="990" height="594"/>
+    </resources>
+</document>
