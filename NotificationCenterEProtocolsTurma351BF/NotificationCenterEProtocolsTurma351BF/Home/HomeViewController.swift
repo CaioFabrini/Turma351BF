@@ -16,6 +16,23 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
+        configObserver()
+    }
+    
+    func configObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(changeMacbook), name: .macbook, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(changeImac), name: .imac, object: nil)
+    }
+    
+    @objc func changeMacbook(_ notification: NSNotification) {
+//        let color = notification.object as? String
+        view.backgroundColor = .red
+    }
+    
+    @objc func changeImac(_ notification: NSNotification) {
+//        let color = notification.object as? String
+        view.backgroundColor = .purple
     }
     
     
