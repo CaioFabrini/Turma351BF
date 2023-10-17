@@ -13,15 +13,21 @@ import UIKit
 // Crie o protocol do lado DE FORA da classe
 // Coloque o protocol para ser do tipo AnyObject
 // Crie as propriedades/metodos no protocol
-// Dentro da classe crie um delegate
+// Dentro da classe crie um delegate e coloque ele SEMPRE COM WEAK
 
 
 // Para trabalhar com protocol e não ter dor de cabeça
 
 // Crie o protocol
-// Utilize o protocol Ex: delegate?.tappedButton()
 // ASSINAR O PROTOCOL Ex: viewController?.delegate = self (SE CASO NÃO ASSINAR, JAMAIS IRÁ FUNCIONAR)
+// Utilize o protocol Ex: delegate?.tappedButton()
 
+// Problemas com Protocol
+
+// Se caso o delegate vier como nil -> significa que o protocol NÃO FOI ASSINADO!!!!!
+// SEMPRE UTILIZE BREAK POINT PARA VALIDAR TODO FLUXO!
+// Comece utilizando break point no momento em que é feito a assinatura e na sequencia coloque o break point quando é realizado o disparo,
+// para garantir que tudo está funcionando corretamente.
 
 
 
