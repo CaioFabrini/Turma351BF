@@ -15,6 +15,8 @@
 		34D9E22D2AE8AA86001A1842 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D9E22B2AE8AA86001A1842 /* LaunchScreen.storyboard */; };
 		34D9E2382AE8AB0D001A1842 /* AuthorizationProcessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D9E2362AE8AB0D001A1842 /* AuthorizationProcessTableViewCell.swift */; };
 		34D9E2392AE8AB0D001A1842 /* AuthorizationProcessTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34D9E2372AE8AB0D001A1842 /* AuthorizationProcessTableViewCell.xib */; };
+		34D9E23D2AEB298D001A1842 /* IdCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D9E23B2AEB298D001A1842 /* IdCardTableViewCell.swift */; };
+		34D9E23E2AEB298D001A1842 /* IdCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34D9E23C2AEB298D001A1842 /* IdCardTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		34D9E22E2AE8AA86001A1842 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34D9E2362AE8AB0D001A1842 /* AuthorizationProcessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationProcessTableViewCell.swift; sourceTree = "<group>"; };
 		34D9E2372AE8AB0D001A1842 /* AuthorizationProcessTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorizationProcessTableViewCell.xib; sourceTree = "<group>"; };
+		34D9E23B2AEB298D001A1842 /* IdCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdCardTableViewCell.swift; sourceTree = "<group>"; };
+		34D9E23C2AEB298D001A1842 /* IdCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IdCardTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 		34D9E2342AE8AAFA001A1842 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				34D9E23A2AEB28CA001A1842 /* IdCard */,
 				34D9E2352AE8AAFE001A1842 /* AuthorizationProcess */,
 			);
 			path = Cells;
@@ -87,6 +92,15 @@
 				34D9E2372AE8AB0D001A1842 /* AuthorizationProcessTableViewCell.xib */,
 			);
 			path = AuthorizationProcess;
+			sourceTree = "<group>";
+		};
+		34D9E23A2AEB28CA001A1842 /* IdCard */ = {
+			isa = PBXGroup;
+			children = (
+				34D9E23B2AEB298D001A1842 /* IdCardTableViewCell.swift */,
+				34D9E23C2AEB298D001A1842 /* IdCardTableViewCell.xib */,
+			);
+			path = IdCard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34D9E22D2AE8AA86001A1842 /* LaunchScreen.storyboard in Resources */,
+				34D9E23E2AEB298D001A1842 /* IdCardTableViewCell.xib in Resources */,
 				34D9E2392AE8AB0D001A1842 /* AuthorizationProcessTableViewCell.xib in Resources */,
 				34D9E22A2AE8AA86001A1842 /* Assets.xcassets in Resources */,
 				34D9E2282AE8AA85001A1842 /* Main.storyboard in Resources */,
@@ -161,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34D9E23D2AEB298D001A1842 /* IdCardTableViewCell.swift in Sources */,
 				34D9E2252AE8AA85001A1842 /* ViewController.swift in Sources */,
 				34D9E2382AE8AB0D001A1842 /* AuthorizationProcessTableViewCell.swift in Sources */,
 				34D9E2212AE8AA85001A1842 /* AppDelegate.swift in Sources */,

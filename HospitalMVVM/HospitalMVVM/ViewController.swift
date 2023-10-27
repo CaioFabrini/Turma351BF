@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -23,18 +23,24 @@ class ViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1.0)
         tableView.register(AuthorizationProcessTableViewCell.nib(), forCellReuseIdentifier: AuthorizationProcessTableViewCell.identifier)
+        tableView.register(IdCardTableViewCell.nib(), forCellReuseIdentifier: IdCardTableViewCell.identifier)
     }
-
+    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: AuthorizationProcessTableViewCell.identifier, for: indexPath) as? AuthorizationProcessTableViewCell
-        return cell ?? UITableViewCell()
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: AuthorizationProcessTableViewCell.identifier, for: indexPath) as? AuthorizationProcessTableViewCell
+            return cell ?? UITableViewCell()
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: IdCardTableViewCell.identifier, for: indexPath) as? IdCardTableViewCell
+            return cell ?? UITableViewCell()
+        }
     }
     
 }
