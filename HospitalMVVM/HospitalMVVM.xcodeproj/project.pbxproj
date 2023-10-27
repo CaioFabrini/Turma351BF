@@ -17,6 +17,8 @@
 		34D9E2392AE8AB0D001A1842 /* AuthorizationProcessTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34D9E2372AE8AB0D001A1842 /* AuthorizationProcessTableViewCell.xib */; };
 		34D9E23D2AEB298D001A1842 /* IdCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D9E23B2AEB298D001A1842 /* IdCardTableViewCell.swift */; };
 		34D9E23E2AEB298D001A1842 /* IdCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34D9E23C2AEB298D001A1842 /* IdCardTableViewCell.xib */; };
+		34D9E2412AEB3F17001A1842 /* ProcedureAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D9E2402AEB3F17001A1842 /* ProcedureAuthorization.swift */; };
+		34D9E2442AEB468E001A1842 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D9E2432AEB468E001A1842 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		34D9E2372AE8AB0D001A1842 /* AuthorizationProcessTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorizationProcessTableViewCell.xib; sourceTree = "<group>"; };
 		34D9E23B2AEB298D001A1842 /* IdCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdCardTableViewCell.swift; sourceTree = "<group>"; };
 		34D9E23C2AEB298D001A1842 /* IdCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IdCardTableViewCell.xib; sourceTree = "<group>"; };
+		34D9E2402AEB3F17001A1842 /* ProcedureAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcedureAuthorization.swift; sourceTree = "<group>"; };
+		34D9E2432AEB468E001A1842 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 		34D9E21F2AE8AA85001A1842 /* HospitalMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				34D9E2422AEB4665001A1842 /* ViewModel */,
+				34D9E23F2AEB3E7C001A1842 /* Model */,
 				34D9E2342AE8AAFA001A1842 /* Cells */,
 				34D9E2202AE8AA85001A1842 /* AppDelegate.swift */,
 				34D9E2222AE8AA85001A1842 /* SceneDelegate.swift */,
@@ -101,6 +107,22 @@
 				34D9E23C2AEB298D001A1842 /* IdCardTableViewCell.xib */,
 			);
 			path = IdCard;
+			sourceTree = "<group>";
+		};
+		34D9E23F2AEB3E7C001A1842 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				34D9E2402AEB3F17001A1842 /* ProcedureAuthorization.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		34D9E2422AEB4665001A1842 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				34D9E2432AEB468E001A1842 /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +203,8 @@
 				34D9E2382AE8AB0D001A1842 /* AuthorizationProcessTableViewCell.swift in Sources */,
 				34D9E2212AE8AA85001A1842 /* AppDelegate.swift in Sources */,
 				34D9E2232AE8AA85001A1842 /* SceneDelegate.swift in Sources */,
+				34D9E2412AEB3F17001A1842 /* ProcedureAuthorization.swift in Sources */,
+				34D9E2442AEB468E001A1842 /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

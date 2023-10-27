@@ -11,6 +11,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    
+    var viewModel: ViewModel = ViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Autorização de Procedimento"
@@ -36,9 +39,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: AuthorizationProcessTableViewCell.identifier, for: indexPath) as? AuthorizationProcessTableViewCell
+//            cell?.setupCell(banner: viewModel.getBanner)
+            cell?.setupCell(banner: viewModel.procedureAuthorization.banner)
             return cell ?? UITableViewCell()
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: IdCardTableViewCell.identifier, for: indexPath) as? IdCardTableViewCell
+//            cell?.setupCell(idCard: viewModel.getIdCard) Esse caso é com variavel computada
+            cell?.setupCell(idCard: viewModel.procedureAuthorization.idCard) // esse caso é com private(set)
             return cell ?? UITableViewCell()
         }
     }

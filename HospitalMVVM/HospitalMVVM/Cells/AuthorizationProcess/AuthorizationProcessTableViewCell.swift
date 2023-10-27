@@ -57,4 +57,10 @@ class AuthorizationProcessTableViewCell: UITableViewCell {
         
     }
     
+    func setupCell(banner: Banner) {
+        titleLabel.text = banner.title
+        detailLabel.text = banner.description
+    }
+    
+    
 }

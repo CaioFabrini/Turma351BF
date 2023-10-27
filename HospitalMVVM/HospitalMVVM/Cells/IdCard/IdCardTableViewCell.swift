@@ -53,4 +53,9 @@ class IdCardTableViewCell: UITableViewCell {
         iconImageView.tintColor = .orange
     }
     
+    func setupCell(idCard: IdCard) {
+        nameLabel.text = idCard.name
+        idNumberLabel.text = "Carteirinha: \(idCard.id)"
+    }
+    
 }
