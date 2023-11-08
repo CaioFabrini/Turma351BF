@@ -11,7 +11,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    
     var viewModel: ViewModel = ViewModel()
     
     override func viewDidLoad() {
