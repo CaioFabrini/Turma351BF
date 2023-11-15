@@ -8,7 +8,7 @@
 import Foundation
 
 class HistoryService {
-    
+
     func getHistoryMock(completion: (Result<History, Error>) -> Void) {
         if let url = Bundle.main.url(forResource: "History", withExtension: "json") {
             do {
