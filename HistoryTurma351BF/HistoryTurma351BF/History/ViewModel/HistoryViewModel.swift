@@ -18,9 +18,21 @@ class HistoryViewModel {
     private var history: History?
     weak var delegate: HistoryViewModelProtocol?
     
-    func fetchHistory() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-            self.service.getHistoryMock { result in
+    func fetchHistoryAlamofire() {
+        service.getHistoryAlamofire { result in
+            switch result {
+            case .success(let success):
+                self.history = success
+                self.delegate?.successRequest()
+            case .failure(_):
+                self.delegate?.errorRequest()
+            }
+        }
+    }
+    
+    func fetchHistoryURLSession() {
+        service.getHistoryURLSession { result in
+            DispatchQueue.main.async {
                 switch result {
                 case .success(let success):
                     self.history = success
@@ -28,6 +40,18 @@ class HistoryViewModel {
                 case .failure(_):
                     self.delegate?.errorRequest()
                 }
+            }
+        }
+    }
+    
+    func fetchHistoryMock() {
+        service.getHistoryMock { result in
+            switch result {
+            case .success(let success):
+                self.history = success
+                self.delegate?.successRequest()
+            case .failure(_):
+                self.delegate?.errorRequest()
             }
         }
     }

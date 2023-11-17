@@ -17,7 +17,7 @@ class HistoryViewController: UIViewController {
         super.viewDidLoad()
         // Atenção, não troque as ordens!!!
         viewModel.delegate = self
-        viewModel.fetchHistory()
+        viewModel.fetchHistoryAlamofire()
     }
     
     func configTableView() {
