@@ -20,6 +20,7 @@ import UIKit
 
 protocol LoginScreenProtocol: AnyObject {
     func tappedLoginButton()
+    func tappedRegisterButton()
 }
 
 class LoginScreen: UIView {
@@ -64,6 +65,20 @@ class LoginScreen: UIView {
         return textField
     }()
     
+    lazy var registerButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Não tem conta? Registre-se", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc private func tappedRegisterButton() {
+        self.delegate?.tappedRegisterButton()
+    }
+    
     lazy var loginButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -96,6 +111,7 @@ class LoginScreen: UIView {
         addSubview(logoImage)
         addSubview(emailTextField)
         addSubview(passwordTextField)
+        addSubview(registerButton)
         addSubview(loginButton)
     }
     
@@ -119,6 +135,9 @@ class LoginScreen: UIView {
             passwordTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             passwordTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             passwordTextField.heightAnchor.constraint(equalToConstant: 40),
+            
+            registerButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 4),
+            registerButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             
             loginButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -50),
             loginButton.centerXAnchor.constraint(equalTo: centerXAnchor),

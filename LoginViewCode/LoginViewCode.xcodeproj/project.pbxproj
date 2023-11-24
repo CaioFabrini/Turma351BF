@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C40A3D7A2B100A3E0009877B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40A3D792B100A3E0009877B /* RegisterViewController.swift */; };
+		C40A3D7D2B100A5F0009877B /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40A3D7C2B100A5F0009877B /* RegisterScreen.swift */; };
+		C40A3D802B1016CD0009877B /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40A3D7F2B1016CD0009877B /* HomeScreen.swift */; };
+		C40A3D832B1019AE0009877B /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40A3D822B1019AE0009877B /* Person.swift */; };
+		C40A3D862B1019E80009877B /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40A3D852B1019E80009877B /* PersonTableViewCell.swift */; };
 		C475292D2B0D76170028F3F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475292C2B0D76170028F3F9 /* AppDelegate.swift */; };
 		C475292F2B0D76170028F3F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475292E2B0D76170028F3F9 /* SceneDelegate.swift */; };
 		C47529312B0D76170028F3F9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47529302B0D76170028F3F9 /* LoginViewController.swift */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C40A3D792B100A3E0009877B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C40A3D7C2B100A5F0009877B /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
+		C40A3D7F2B1016CD0009877B /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		C40A3D822B1019AE0009877B /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		C40A3D852B1019E80009877B /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		C47529292B0D76170028F3F9 /* LoginViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C475292C2B0D76170028F3F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C475292E2B0D76170028F3F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +49,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C40A3D782B100A2E0009877B /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				C40A3D7B2B100A420009877B /* Screen */,
+				C40A3D792B100A3E0009877B /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		C40A3D7B2B100A420009877B /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				C40A3D7C2B100A5F0009877B /* RegisterScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		C40A3D7E2B1016BE0009877B /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				C40A3D7F2B1016CD0009877B /* HomeScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		C40A3D812B1019A40009877B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C40A3D822B1019AE0009877B /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C40A3D842B1019C70009877B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C40A3D852B1019E80009877B /* PersonTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		C47529202B0D76170028F3F9 = {
 			isa = PBXGroup;
 			children = (
@@ -58,8 +109,10 @@
 		C475292B2B0D76170028F3F9 /* LoginViewCode */ = {
 			isa = PBXGroup;
 			children = (
-				C47529472B0D96B70028F3F9 /* Home */,
+				C40A3D812B1019A40009877B /* Model */,
+				C40A3D782B100A2E0009877B /* Register */,
 				C47529412B0D7A7F0028F3F9 /* Login */,
+				C47529472B0D96B70028F3F9 /* Home */,
 				C47529402B0D7A600028F3F9 /* Resources */,
 				C475293A2B0D76190028F3F9 /* Info.plist */,
 			);
@@ -97,6 +150,8 @@
 		C47529472B0D96B70028F3F9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C40A3D842B1019C70009877B /* Cell */,
+				C40A3D7E2B1016BE0009877B /* Screen */,
 				C47529452B0D96B30028F3F9 /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -175,7 +230,12 @@
 				C47529462B0D96B30028F3F9 /* HomeViewController.swift in Sources */,
 				C47529312B0D76170028F3F9 /* LoginViewController.swift in Sources */,
 				C47529432B0D7AE10028F3F9 /* LoginScreen.swift in Sources */,
+				C40A3D7D2B100A5F0009877B /* RegisterScreen.swift in Sources */,
+				C40A3D802B1016CD0009877B /* HomeScreen.swift in Sources */,
+				C40A3D7A2B100A3E0009877B /* RegisterViewController.swift in Sources */,
+				C40A3D832B1019AE0009877B /* Person.swift in Sources */,
 				C475292D2B0D76170028F3F9 /* AppDelegate.swift in Sources */,
+				C40A3D862B1019E80009877B /* PersonTableViewCell.swift in Sources */,
 				C475292F2B0D76170028F3F9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
