@@ -9,7 +9,8 @@ import UIKit
 
 class LoginViewModel {
     
-    var listCountryDetail: [CountryDetail] = []
+    var listEmbassyAbroadDetail: [EmbassyAbroadDetail] = []
+    var activities: [Activity] = []
     
     private var service: LoginService = LoginService()
     
@@ -18,11 +19,25 @@ class LoginViewModel {
             switch result {
             case .success(let success):
                 print(success)
-                self.listCountryDetail = success.data ?? []
+                self.listEmbassyAbroadDetail = success.data ?? []
             case .failure(let failure):
                 print(failure.localizedDescription)
             }
         }
     }
+    
+    func featchCountryActivities() {
+        service.getCountryActivitiesURLSession { result in
+            switch result {
+            case .success(let success):
+                print(success)
+                self.activities = success.data?.activities ?? []
+            case .failure(let failure):
+                print(failure.localizedDescription)
+            }
+        }
+    }
+    
+    
 
 }

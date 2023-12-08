@@ -8,11 +8,11 @@
 import Foundation
 
 // MARK: - ListCountry
-struct Country: Codable {
-    var data: [CountryDetail]?
+struct EmbassyAbroad: Codable {
+    var data: [EmbassyAbroadDetail]?
 }
 
 // MARK: - Datum
-struct CountryDetail: Codable {
+struct EmbassyAbroadDetail: Codable {
     var address, phone: String?
 }

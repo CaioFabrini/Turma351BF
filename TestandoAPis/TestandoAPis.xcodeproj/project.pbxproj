@@ -16,6 +16,7 @@
 		3474FDD32B2280CE0076FFAD /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3474FDD22B2280CE0076FFAD /* LoginViewModel.swift */; };
 		3474FDD62B2280E60076FFAD /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3474FDD52B2280E60076FFAD /* LoginService.swift */; };
 		3474FDD92B22831A0076FFAD /* ListCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3474FDD82B22831A0076FFAD /* ListCountry.swift */; };
+		3474FDDB2B2296790076FFAD /* CountryActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3474FDDA2B2296790076FFAD /* CountryActivities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3474FDD22B2280CE0076FFAD /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		3474FDD52B2280E60076FFAD /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		3474FDD82B22831A0076FFAD /* ListCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCountry.swift; sourceTree = "<group>"; };
+		3474FDDA2B2296790076FFAD /* CountryActivities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryActivities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				3474FDD82B22831A0076FFAD /* ListCountry.swift */,
+				3474FDDA2B2296790076FFAD /* CountryActivities.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				3474FDD62B2280E60076FFAD /* LoginService.swift in Sources */,
 				3474FDBE2B2280710076FFAD /* AppDelegate.swift in Sources */,
 				3474FDD92B22831A0076FFAD /* ListCountry.swift in Sources */,
+				3474FDDB2B2296790076FFAD /* CountryActivities.swift in Sources */,
 				3474FDC02B2280710076FFAD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
