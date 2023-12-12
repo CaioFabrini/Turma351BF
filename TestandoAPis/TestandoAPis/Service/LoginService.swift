@@ -9,7 +9,7 @@ import UIKit
 
 class LoginService {
     
-    func getListCountryURLSession(completion: @escaping (Result<EmbassyAbroad, Error>) -> Void) {
+    func getEmbassyAbroadURLSession(completion: @escaping (Result<EmbassyAbroad, Error>) -> Void) {
         guard let url = URL(string: "https://travel-info-api.p.rapidapi.com/find-embassy?source=turkey&destination=usa") else { return }
         
         let headers = [
@@ -63,6 +63,70 @@ class LoginService {
                 do {
                     let countryActivities: CountryActivities = try JSONDecoder().decode(CountryActivities.self, from: dataResult)
                     completion(.success(countryActivities))
+                } catch {
+                    completion(.failure(error))
+                }
+            } else {
+                completion(.failure(error ?? NSError(domain: "Deu ruim em", code: response.statusCode)))
+            }
+        }
+        task.resume()
+    }
+    
+    func getCountryDetailURLSession(country: String, completion: @escaping (Result<CountryDetail, Error>) -> Void) {
+        guard let url = URL(string: "https://travel-info-api.p.rapidapi.com/country-details?country=\(country)") else { return }
+        
+        let headers = [
+            "X-RapidAPI-Key": "dd833e79efmsh637ad2745ae2477p1c7d11jsn93c035258ef1",
+            "X-RapidAPI-Host": "travel-info-api.p.rapidapi.com"
+        ]
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.allHTTPHeaderFields = headers
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            guard let dataResult = data else { return }
+            
+            guard let response = response as? HTTPURLResponse else { return }
+            
+            if response.statusCode == 200 {
+                do {
+                    let countryDetail: CountryDetail = try JSONDecoder().decode(CountryDetail.self, from: dataResult)
+                    completion(.success(countryDetail))
+                } catch {
+                    completion(.failure(error))
+                }
+            } else {
+                completion(.failure(error ?? NSError(domain: "Deu ruim em", code: response.statusCode)))
+            }
+        }
+        task.resume()
+    }
+    
+    func getCountryBriefURLSession(completion: @escaping (Result<CountryBrief, Error>) -> Void) {
+        guard let url = URL(string: "https://travel-info-api.p.rapidapi.com/country?country=turkey") else { return }
+        
+        let headers = [
+            "X-RapidAPI-Key": "dd833e79efmsh637ad2745ae2477p1c7d11jsn93c035258ef1",
+            "X-RapidAPI-Host": "travel-info-api.p.rapidapi.com"
+        ]
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.allHTTPHeaderFields = headers
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            guard let dataResult = data else { return }
+            
+            guard let response = response as? HTTPURLResponse else { return }
+            
+            if response.statusCode == 200 {
+                do {
+                    let countryBrief: CountryBrief = try JSONDecoder().decode(CountryBrief.self, from: dataResult)
+                    completion(.success(countryBrief))
                 } catch {
                     completion(.failure(error))
                 }

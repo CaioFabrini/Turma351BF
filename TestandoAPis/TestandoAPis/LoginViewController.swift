@@ -13,8 +13,10 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        viewModel.featchCountryDetail()
-        viewModel.featchCountryActivities()
+//        viewModel.fetchEmbassyAbroad()
+//        viewModel.fetchCountryActivities()
+        viewModel.fetchCountryDetail(country: "brazil")
+//          viewModel.fetchCountryBrief()
     }
 
 

@@ -11,11 +11,13 @@ class LoginViewModel {
     
     var listEmbassyAbroadDetail: [EmbassyAbroadDetail] = []
     var activities: [Activity] = []
+    var countryDetail: CountryDetail?
+    var countryBriefData: CountryBriefData?
     
     private var service: LoginService = LoginService()
     
-    func featchCountryDetail() {
-        service.getListCountryURLSession { result in
+    func fetchEmbassyAbroad() {
+        service.getEmbassyAbroadURLSession { result in
             switch result {
             case .success(let success):
                 print(success)
@@ -26,7 +28,7 @@ class LoginViewModel {
         }
     }
     
-    func featchCountryActivities() {
+    func fetchCountryActivities() {
         service.getCountryActivitiesURLSession { result in
             switch result {
             case .success(let success):
@@ -38,6 +40,29 @@ class LoginViewModel {
         }
     }
     
+    func fetchCountryDetail(country: String) {
+        service.getCountryDetailURLSession(country: country) { result in
+            switch result {
+            case .success(let success):
+                print(success)
+                self.countryDetail = success
+            case .failure(let failure):
+                print(failure.localizedDescription)
+            }
+        }
+    }
+    
+    func fetchCountryBrief() {
+        service.getCountryBriefURLSession { result in
+            switch result {
+            case .success(let success):
+                print(success.data ?? "deu ruim")
+                self.countryBriefData = success.data
+            case .failure(let failure):
+                print(failure.localizedDescription)
+            }
+        }
+    }
     
 
 }

@@ -15,8 +15,10 @@
 		3474FDCA2B2280730076FFAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3474FDC82B2280730076FFAD /* LaunchScreen.storyboard */; };
 		3474FDD32B2280CE0076FFAD /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3474FDD22B2280CE0076FFAD /* LoginViewModel.swift */; };
 		3474FDD62B2280E60076FFAD /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3474FDD52B2280E60076FFAD /* LoginService.swift */; };
-		3474FDD92B22831A0076FFAD /* ListCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3474FDD82B22831A0076FFAD /* ListCountry.swift */; };
+		3474FDD92B22831A0076FFAD /* EmbassyAbroad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3474FDD82B22831A0076FFAD /* EmbassyAbroad.swift */; };
 		3474FDDB2B2296790076FFAD /* CountryActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3474FDDA2B2296790076FFAD /* CountryActivities.swift */; };
+		3474FDDD2B22A3130076FFAD /* CountryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3474FDDC2B22A3130076FFAD /* CountryDetail.swift */; };
+		3474FDDF2B22AD120076FFAD /* CountryBrief.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3474FDDE2B22AD120076FFAD /* CountryBrief.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +32,10 @@
 		3474FDCB2B2280730076FFAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3474FDD22B2280CE0076FFAD /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		3474FDD52B2280E60076FFAD /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
-		3474FDD82B22831A0076FFAD /* ListCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCountry.swift; sourceTree = "<group>"; };
+		3474FDD82B22831A0076FFAD /* EmbassyAbroad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbassyAbroad.swift; sourceTree = "<group>"; };
 		3474FDDA2B2296790076FFAD /* CountryActivities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryActivities.swift; sourceTree = "<group>"; };
+		3474FDDC2B22A3130076FFAD /* CountryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetail.swift; sourceTree = "<group>"; };
+		3474FDDE2B22AD120076FFAD /* CountryBrief.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryBrief.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +101,10 @@
 		3474FDD72B2283090076FFAD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3474FDD82B22831A0076FFAD /* ListCountry.swift */,
+				3474FDD82B22831A0076FFAD /* EmbassyAbroad.swift */,
 				3474FDDA2B2296790076FFAD /* CountryActivities.swift */,
+				3474FDDC2B22A3130076FFAD /* CountryDetail.swift */,
+				3474FDDE2B22AD120076FFAD /* CountryBrief.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,9 +182,11 @@
 			files = (
 				3474FDD32B2280CE0076FFAD /* LoginViewModel.swift in Sources */,
 				3474FDC22B2280710076FFAD /* LoginViewController.swift in Sources */,
+				3474FDDF2B22AD120076FFAD /* CountryBrief.swift in Sources */,
 				3474FDD62B2280E60076FFAD /* LoginService.swift in Sources */,
 				3474FDBE2B2280710076FFAD /* AppDelegate.swift in Sources */,
-				3474FDD92B22831A0076FFAD /* ListCountry.swift in Sources */,
+				3474FDD92B22831A0076FFAD /* EmbassyAbroad.swift in Sources */,
+				3474FDDD2B22A3130076FFAD /* CountryDetail.swift in Sources */,
 				3474FDDB2B2296790076FFAD /* CountryActivities.swift in Sources */,
 				3474FDC02B2280710076FFAD /* SceneDelegate.swift in Sources */,
 			);
